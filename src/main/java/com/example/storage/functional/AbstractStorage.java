@@ -3,6 +3,9 @@ package com.example.storage.functional;
 import com.example.storage.exception.ExistStorageException;
 import com.example.storage.exception.NotExistStorageException;
 import com.example.storage.model.Resume;
+import org.slf4j.ILoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Comparator;
@@ -11,6 +14,8 @@ import java.util.stream.Collectors;
 
 
 public abstract class AbstractStorage<SearchKey> implements Storage {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractStorage.class.getName());
     static final Comparator<Resume> RESUME_COMPARATOR = ((o1, o2) -> o1.getFullName().compareTo(o2.getFullName()));
 
     abstract List<Resume> getAllResumes();
@@ -30,13 +35,15 @@ public abstract class AbstractStorage<SearchKey> implements Storage {
     @DeleteMapping("/clear")
     @Override
     public void clear() {
+        LOGGER.info("DELETE request received for all resumes");
+
         getAllResumes().clear();
     }
 
     @PostMapping("/save")
     @Override
     public void save(@RequestBody Resume r) {
-        System.out.println("Saving resume: " + r.getUuid());
+        LOGGER.info("POST request received for saving resume: "+r.getUuid());
 
         SearchKey searchKey = getSearchKey(r.getUuid());
 
@@ -51,7 +58,7 @@ public abstract class AbstractStorage<SearchKey> implements Storage {
     @GetMapping("/get")
     @Override
     public Resume get(@RequestParam("uuid") String uuid) {
-        System.out.println("GET request received for UUID: " + uuid);
+        LOGGER.info("GET request received for UUID: " + uuid);
 
         SearchKey searchKey = getSearchKey(uuid);
 
@@ -65,6 +72,8 @@ public abstract class AbstractStorage<SearchKey> implements Storage {
     @GetMapping("/get-all")
     @Override
     public List<Resume> getAllSorted() {
+        LOGGER.info("GET request received for all resumes");
+
         List<Resume> list = getAllResumes();
         return list.stream()
                 .sorted(RESUME_COMPARATOR)
@@ -74,6 +83,8 @@ public abstract class AbstractStorage<SearchKey> implements Storage {
     @DeleteMapping("delete")
     @Override
     public void delete(@RequestParam String uuid) {
+        LOGGER.info("DELETE request received for  UUID: " + uuid);
+
         SearchKey searchKey = getSearchKey(uuid);
 
         if (!isExist(searchKey)) {
@@ -86,6 +97,8 @@ public abstract class AbstractStorage<SearchKey> implements Storage {
     @PutMapping("/update")
     @Override
     public void update(@RequestBody Resume r) {
+        LOGGER.info("PUT request received for UUID: " + r.getUuid());
+
         SearchKey searchKey = getSearchKey(r.getUuid());
 
         if (!isExist(searchKey)) {
