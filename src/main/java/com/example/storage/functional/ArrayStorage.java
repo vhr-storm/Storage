@@ -1,7 +1,11 @@
 package com.example.storage.functional;
 
 import com.example.storage.model.Resume;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/array")
 public class ArrayStorage extends AbstractArrayStorage {
     @Override
     protected void insertElement(Resume r, int index) {

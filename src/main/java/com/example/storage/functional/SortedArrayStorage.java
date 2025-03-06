@@ -4,9 +4,13 @@ import com.example.storage.exception.*;
 import com.example.storage.model.Resume;
 import com.example.storage.exception.ExistStorageException;
 import com.example.storage.exception.StorageException;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 
+@RestController
+@RequestMapping("/sorted-array")
 public class SortedArrayStorage extends AbstractArrayStorage {
 
 

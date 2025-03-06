@@ -1,10 +1,14 @@
 package com.example.storage.functional;
 
 import com.example.storage.model.Resume;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+@RequestMapping("/list")
 public class ListStorage extends AbstractStorage<Integer> {
     private static final List<Resume> LIST_RESUME = new ArrayList<>();
 

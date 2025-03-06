@@ -1,12 +1,16 @@
 package com.example.storage.functional;
 
 import com.example.storage.model.Resume;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@RestController
+@RequestMapping("/map-uuid")
 public class MapUuidStorage extends AbstractStorage<String> {
 
     private final Map<String, Resume> MAP_UUID = new HashMap<>();
