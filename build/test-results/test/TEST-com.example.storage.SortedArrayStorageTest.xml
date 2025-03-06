@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.storage.SortedArrayStorageTest" tests="12" skipped="1" failures="0" errors="0" timestamp="2025-03-05T04:09:35" hostname="VHR" time="0.017">
+  <properties/>
+  <testcase name="testGet()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testClear()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testSaveExisting()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testSave()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testSize()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testUpdateNotExisting()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testDeleteNotExisting()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testGetNotExisting()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testDelete()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testGetAll()" classname="com.example.storage.SortedArrayStorageTest" time="0.001"/>
+  <testcase name="testUpdate()" classname="com.example.storage.SortedArrayStorageTest" time="0.002"/>
+  <testcase name="testSaveOverflow()" classname="com.example.storage.SortedArrayStorageTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[2025-03-05T11:09:35.100+07:00  INFO 11640 --- [storage] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.storage.SortedArrayStorageTest]: SortedArrayStorageTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-05T11:09:35.101+07:00  INFO 11640 --- [storage] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.storage.StorageApplication for test class com.example.storage.SortedArrayStorageTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

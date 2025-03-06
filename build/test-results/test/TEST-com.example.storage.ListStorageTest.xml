@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.storage.ListStorageTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-03-05T04:09:35" hostname="VHR" time="0.026">
+  <properties/>
+  <testcase name="testGet()" classname="com.example.storage.ListStorageTest" time="0.003"/>
+  <testcase name="testClear()" classname="com.example.storage.ListStorageTest" time="0.003"/>
+  <testcase name="testSaveExisting()" classname="com.example.storage.ListStorageTest" time="0.002"/>
+  <testcase name="testSave()" classname="com.example.storage.ListStorageTest" time="0.001"/>
+  <testcase name="testSize()" classname="com.example.storage.ListStorageTest" time="0.002"/>
+  <testcase name="testUpdateNotExisting()" classname="com.example.storage.ListStorageTest" time="0.002"/>
+  <testcase name="testDeleteNotExisting()" classname="com.example.storage.ListStorageTest" time="0.001"/>
+  <testcase name="testGetNotExisting()" classname="com.example.storage.ListStorageTest" time="0.002"/>
+  <testcase name="testDelete()" classname="com.example.storage.ListStorageTest" time="0.001"/>
+  <testcase name="testGetAll()" classname="com.example.storage.ListStorageTest" time="0.001"/>
+  <testcase name="testUpdate()" classname="com.example.storage.ListStorageTest" time="0.001"/>
+  <system-out><![CDATA[2025-03-05T11:09:35.016+07:00  INFO 11640 --- [storage] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.storage.ListStorageTest]: ListStorageTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-05T11:09:35.018+07:00  INFO 11640 --- [storage] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.storage.StorageApplication for test class com.example.storage.ListStorageTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

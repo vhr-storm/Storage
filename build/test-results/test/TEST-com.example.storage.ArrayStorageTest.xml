@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.storage.ArrayStorageTest" tests="12" skipped="1" failures="0" errors="0" timestamp="2025-03-05T04:09:34" hostname="VHR" time="0.541">
+  <properties/>
+  <testcase name="testGet()" classname="com.example.storage.ArrayStorageTest" time="0.512"/>
+  <testcase name="testClear()" classname="com.example.storage.ArrayStorageTest" time="0.003"/>
+  <testcase name="testSaveExisting()" classname="com.example.storage.ArrayStorageTest" time="0.002"/>
+  <testcase name="testSave()" classname="com.example.storage.ArrayStorageTest" time="0.001"/>
+  <testcase name="testSize()" classname="com.example.storage.ArrayStorageTest" time="0.001"/>
+  <testcase name="testUpdateNotExisting()" classname="com.example.storage.ArrayStorageTest" time="0.002"/>
+  <testcase name="testDeleteNotExisting()" classname="com.example.storage.ArrayStorageTest" time="0.001"/>
+  <testcase name="testGetNotExisting()" classname="com.example.storage.ArrayStorageTest" time="0.002"/>
+  <testcase name="testDelete()" classname="com.example.storage.ArrayStorageTest" time="0.002"/>
+  <testcase name="testGetAll()" classname="com.example.storage.ArrayStorageTest" time="0.002"/>
+  <testcase name="testUpdate()" classname="com.example.storage.ArrayStorageTest" time="0.002"/>
+  <testcase name="testSaveOverflow()" classname="com.example.storage.ArrayStorageTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[11:09:33.290 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.storage.ArrayStorageTest]: ArrayStorageTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:09:33.380 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.storage.StorageApplication for test class com.example.storage.ArrayStorageTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2025-03-05T11:09:33.675+07:00  INFO 11640 --- [storage] [    Test worker] com.example.storage.ArrayStorageTest     : Starting ArrayStorageTest using Java 23.0.2 with PID 11640 (started by just_ in C:\programmist\java\resume\storage)
+2025-03-05T11:09:33.676+07:00  INFO 11640 --- [storage] [    Test worker] com.example.storage.ArrayStorageTest     : No active profile set, falling back to 1 default profile: "default"
+2025-03-05T11:09:34.459+07:00  INFO 11640 --- [storage] [    Test worker] com.example.storage.ArrayStorageTest     : Started ArrayStorageTest in 0.961 seconds (process running for 1.817)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\just_\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
