@@ -15,15 +15,24 @@ public class StorageFactory {
     }
 
     public static AbstractStorage createStorage(StorageType type) {
-        AbstractStorage typeStorage = null;
+
         switch (type) {
-            case ARRAY_STORAGE -> typeStorage = new ArrayStorage();
-            case SORTED_ARRAY_STORAGE -> typeStorage = new SortedArrayStorage();
-            case MAP_UUID_STORAGE -> typeStorage = new MapUuidStorage();
-            case LIST_STORAGE -> typeStorage = new ListStorage();
-            case MAP_RESUME_STORAGE -> typeStorage = new MapResumeStorage();
+            case ARRAY_STORAGE -> {
+                return new ArrayStorage();
+            }
+            case SORTED_ARRAY_STORAGE -> {
+                return new SortedArrayStorage();
+            }
+            case MAP_UUID_STORAGE -> {
+                return new MapUuidStorage();
+            }
+            case LIST_STORAGE -> {
+                return new ListStorage();
+            }
+            case MAP_RESUME_STORAGE -> {
+                return new MapResumeStorage();
+            }
             default -> throw new NotExistTypeStorageException(type.toString());
         }
-        return typeStorage;
     }
 }
